@@ -1,0 +1,60 @@
+<!-- (32°F − 32) × 5/9 = 0°C --> 
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Convert Temperature </title> <!--shown in browers bar -->
+    </head>
+    <style>
+        h1{
+            background-color: green;
+            text-align: center;
+            font-style: italic;
+        }
+        input[type="number"] {
+            background-color: gold; 
+        }
+        button {
+            text-align: center;
+            background-color: red;
+            color: black;
+            border: 2px black;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: yellow;
+        }
+        #result {
+            text-align: center;
+            font-size: 40px;
+            background-color: blueviolet;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+    <body>
+        <h1>Converter</h1>
+        Enter Temperature in Celsius <input type="number" id="celsiusNumber"></input> <br> <br>
+
+        <button onclick="convert()"> Click here to convert Celsius to Fahrenheit  </button> <br><br>
+        
+        <p id="result"></p>
+
+        <script>
+
+            function convert(){
+                const celsius = parseFloat(document.getElementById('celsiusNumber').value);
+
+                if(isNaN(celsius)){
+                    alert("Please enter number for celsius");
+                    return;
+                }
+
+                const fahrenheit = (celsius * 5/9) + 32;
+
+                const temp = document.getElementById('result').innerText = celsius + " degrees Celsius " + fahrenheit + " degrees fahrenheit.";
+            }
+
+        </script>
+    </body>
+</html>

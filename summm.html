@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        Enter numbers <input type ="text" id="nums"/>
+        <button onclick="handleClick()"> Click </button>  
+        <p id="sum"> </p>
+
+        <script>
+            function handleClick(){
+                const nums = document.getElementById("nums").value;
+
+                const numsArray = nums.split(', '); // [1,2,3,4,5] --> 
+                
+                console.log(numsArray);
+
+                let sum = 0;
+
+                for(let i = 0; i< numsArray.length; i++){
+                    sum = sum + (+numsArray[i]);
+                    console.log(sum);
+                }
+
+                const p = document.getElementById("sum"); // to show values on screen 
+                p.innerText = `Sum of ${nums} 
+                is = ${sum}`  // Sum of 2, 4, 5, 6, 7 is = 24 
+
+                // To concat two strings we use + 
+                // To get String in new line we use string literals
+
+                console.log(nums);
+            }
+
+        </script>
+
+    </body>
+</html>
+
+
+
+// convert temp from Farhen to centigrade -- tables
