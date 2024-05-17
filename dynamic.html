@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+
+
+        <script>
+            const users = [{name: 'sai', phone: 12345, email: 'sai@test', address:'HYD'},
+            {name: 'krishna', phone: 4567, email: 'krishna@test', address:'Vij'},
+            {name: 'Vinay', phone: 89034, email: 'vinay@test', address:'TIR'},
+            {name: 'Khaja', phone: 78934, email: 'khaja@test', address:'WAR'}  
+            ]; // object 
+
+            const table = document.createElement('table'); //create table
+
+            table.setAttribute('border', 1.5) // table border
+
+            const thead = document.createElement('thead'); //thead
+
+            const tr = document.createElement('tr'); 
+
+            const th1 = document.createElement('th');
+
+            th1.innerText = 'name'
+
+            const th2 = document.createElement('th');
+
+            th2.innerText = 'phone'
+
+            const th3 = document.createElement('th');
+
+            th3.innerText = 'email'
+
+            const th4 = document.createElement('th');
+
+            th4.innerText = 'address'
+
+            tr.appendChild(th1)
+            tr.appendChild(th2)
+            tr.appendChild(th3)
+            tr.appendChild(th4)
+
+            thead.appendChild(tr)
+
+            table.appendChild(thead)
+
+
+            // Creation of table content -- hard code for adding one row
+
+            const tbody = document.createElement('tbody');
+
+            // const tr1 = document.createElement('tr');
+
+            // const td1 = document.createElement('td');
+            // const td2 = document.createElement('td');
+            // const td3 = document.createElement('td');
+            // const td4 = document.createElement('td');
+
+            // td1.innerText = 'sai';
+            // td2.innerText = '12345';
+            // td3.innerText = 'sai@test';
+            // td4.innerText = 'HYD';
+
+            // tr1.appendChild(td1);
+            // tr1.appendChild(td2);
+            // tr1.appendChild(td3);
+            // tr1.appendChild(td4);
+
+            // tbody.appendChild(tr1);
+
+            // // adding 2nd row
+
+            // const tr2 = document.createElement('tr');
+
+            // const td5 = document.createElement('td');
+            // const td6 = document.createElement('td');
+            // const td7 = document.createElement('td');
+            // const td8 = document.createElement('td');
+
+            // td5.innerText = 'sai';
+            // td6.innerText = '12345';
+            // td7.innerText = 'sai@test';
+            // td8.innerText = 'HYD';
+
+            // tr2.appendChild(td5);
+            // tr2.appendChild(td6);
+            // tr2.appendChild(td7);
+            // tr2.appendChild(td8);
+
+            // tbody.appendChild(tr2); // append body
+
+
+            // using loop to reduce code 
+
+            for(let i = 0; i< users.length; i++){
+                const user = users[i];
+                console.log(user);
+
+                const tr = document.createElement('tr');
+                const td1 = document.createElement('td');
+                const td2 = document.createElement('td');
+                const td3 = document.createElement('td');
+                const td4 = document.createElement('td');
+
+                td1.innerText = user.name;
+                td2.innerText = user.phone;
+                td3.innerText = user.email;
+                td4.innerText = user.address;
+
+                tr.appendChild(td1);
+                tr.appendChild(td2);
+                tr.appendChild(td3);
+                tr.appendChild(td4);
+                
+                tbody.appendChild(tr);
+
+            }
+            
+            table.appendChild(tbody); // append body 
+
+            document.body.appendChild(table)
+
+        </script>
+    </body>
+</html>
