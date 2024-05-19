@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <h1> • User Details •</h1>
+    <style>
+        h1{
+            font-style: italic;
+            color: darkblue;
+        }
+        body{
+            text-align: center;
+            width:200;
+            height:300px;
+            border:5px solid black;
+            padding:50px;
+            margin:30px;
+        }
+        #name{
+            padding: 5px;
+            margin-left: 60px;
+        }
+        #email{
+            padding: 5px;
+            margin-left: 40px;
+        }
+        #mobile{
+            margin-left: 0px;
+            padding: 5px;
+        }
+        #address{
+            margin-left: 50px;
+            padding: 5px;
+        }
+        
+        button{
+            margin-top: 20px;
+            width: 100px;
+            height: 50px;
+            background-color: rgb(151, 149, 149);
+        }
+        button:hover {
+            background-color: orange;
+        }
+        table{
+            margin-top: 100px;
+            margin-right: 10px;
+            width : 500px; 
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 20px;
+            text-align: left;
+        }
+        
+    </style>
+    <body>
+        Enter Name <input type="text" id="name"> </input> <br> <br>
+        Enter Email ID <input type="email" id="email"> </input> <br> <br>
+        Enter Mobile Number <input type="text" id="mobile"> </input> <br> <br>
+        Enter Address <input type="text" id="address"> </input> <br> <br>
+
+        <button id="add"> Add User</button> 
+
+        <table id = "userTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email ID</th>
+                    <th>Mobile Number</th>
+                    <th>Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+
+        <script>
+            document.getElementById('add').addEventListener('click', function(){
+
+            const name = document.getElementById('name').value;
+            document.getElementById('name').value = '';
+
+            const email = document.getElementById('email').value;
+            document.getElementById('email').value = '';
+            
+            const mobile = document.getElementById('mobile').value;
+            document.getElementById('mobile').value = '';
+
+            const address = document.getElementById('address').value;
+            document.getElementById('address').value = '';
+            
+            ///////////
+            
+            const table = document.querySelector('#userTable tbody'); /////
+            const newRow = `
+                <tr>
+                    <td> ${name} </td>
+                    <td> ${email} </td
+                    <td> ${mobile} </td>
+                    <td> ${address} </td>
+                    </tr>
+            `;
+
+            table.insertAdjacentHTML('beforeend',newRow); // ask anna 
+
+            });
+
+        </script>
+    </body>
+</html>

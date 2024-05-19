@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        button {
+            padding: 15px 25px;
+            margin: 10px;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        .red {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="greenbutton" class="green" value="green">Green</button>
+    <button id="bluebutton" class="blue" value="blue">Blue</button>
+    <button id="redbutton" class="red" value="red">Red</button>
+
+    <script>
+        document.getElementById('greenbutton').addEventListener('click', function(e){
+            document.body.style.backgroundColor = e.target.value;
+        });
+
+        document.getElementById('bluebutton').addEventListener('click', function(e){
+            document.body.style.backgroundColor = e.target.value;
+        });
+
+        document.getElementById('redbutton').addEventListener('click',function(e){
+            document.body.style.backgroundColor = e.target.value;
+        });
+
+    </script>
+    
+</body>
+</html>

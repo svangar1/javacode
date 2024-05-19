@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+    Enter Number1 <input type = "text" id="num1" > </input>
+    Enter Number2 <input type = "text" id="num2" > </input>
+    
+    <button onclick="calculateSum()"> Click here </button>
+    <p id="Sum"> </p>
+
+    <script>
+        function calculateSum() {
+            const num1 = document.getElementById('num1').value;  //.value to get value from the object 
+
+            const num2 = document.getElementById('num2').value;
+
+            const sum = (+num1) + (+num2); // convert string to number --> parse Int
+
+            const p = document.getElementById('Sum')
+
+            p.innerText = `${num1} + ${num2} = ${sum}` // string literal
+
+            // 1, 2, 3, 4 = 10 (sum)
+            
+        }
+    </script>
+</body>
+</html>
